@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人留言</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <style>
+        .message-board {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .message-form {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #3498db;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #2980b9;
+        }
+
+        .messages {
+            margin-top: 30px;
+        }
+
+        .message {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #3498db;
+        }
+
+        .message-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .message-content {
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>个人知识库</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="index01.html">数据可视化</a></li>
+                <li><a href="index02.html">个人论文</a></li>
+                <li><a href="index03.html">文章收集</a></li>
+                <li><a href="index04.html">掌握软件</a></li>
+                <li><a href="index05.html">工具分享</a></li>
+                <li><a href="index06.html">个人留言</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="message-board">
+            <h2>留言板</h2>
+            <div class="message-form">
+                <form id="messageForm">
+                    <div class="form-group">
+                        <label for="name">姓名：</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">邮箱：</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">留言内容：</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">提交留言</button>
+                </form>
+            </div>
+
+            <div class="messages">
+                <div class="message">
+                    <div class="message-header">
+                        <span class="author">张三</span>
+                        <span class="date">2024-01-15</span>
+                    </div>
+                    <div class="message-content">
+                        这个知识库整理得很好，对我帮助很大！
+                    </div>
+                </div>
+                <div class="message">
+                    <div class="message-header">
+                        <span class="author">李四</span>
+                        <span class="date">2024-01-14</span>
+                    </div>
+                    <div class="message-content">
+                        内容很实用，希望能持续更新！
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 段劢谦个人知识库</p>
+    </footer>
+</body>
+</html>
